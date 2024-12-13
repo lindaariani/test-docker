@@ -1,6 +1,6 @@
 <?php
 
-$host = "mobillett_db";
+$host = "a_db";
 $username = "mobillett";
 $password = "FleskBurger";
 
