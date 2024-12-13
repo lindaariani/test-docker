@@ -1,6 +1,6 @@
 <?php
 
-$host = "a_db";
+$host = "a-mysql.docker_mob";
 $username = "mobillett";
 $password = "FleskBurger";
 

@@ -21,4 +21,8 @@ jobs:
         run: |
           docker ps
           docker exec a-php composer install
+          docker exec a-php ping -c 4 a_db
+          docker exec a-php ping -c 4 a-mysql
+          docker exec a-php ping -c 4 mobillett_db
+          docker exec a-php ping -c 4 a-mysql.docker_mob
           docker exec a-php php test-pdo.php
