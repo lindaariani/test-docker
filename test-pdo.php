@@ -1,7 +1,7 @@
 <?php
 
 $host = "a-mysql.docker_mob";
-$username = "mobillett";
+$username = "root";
 $password = "FleskBurger";
 
 $pdo = new PDO("mysql:host=" . $host, $username, $password);
