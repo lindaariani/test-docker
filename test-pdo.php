@@ -2,7 +2,7 @@
 
 $host = "a-mysql.docker_mob";
 $username = "root";
-$password = "FleskBurger";
+$password = "banana83Wolf";
 
 $pdo = new PDO("mysql:host=" . $host, $username, $password);
 
