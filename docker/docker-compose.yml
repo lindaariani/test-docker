@@ -5,7 +5,6 @@ services:
       context: ../
       dockerfile: docker/php/Dockerfile
     volumes:
-      - ../:/code
       - ../logs:/applogs
     expose:
       - 9000
@@ -16,33 +15,3 @@ services:
       DATABASE_NAME: mobillett
       SESSION_SAVE_HANDLER: files
       SESSION_SAVE_PATH: /tmp/
-    networks:
-      - mob
-
-  a_db:
-    container_name: a-mysql
-    image: mysql:8.4.0
-    command:
-      - mysqld
-      - "--sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
-      - "--character-set-server=utf8mb4"
-      - "--collation-server=utf8mb4_unicode_ci"
-    volumes:
-      - mob-db-data:/var/lib/mysql
-    expose:
-      - 3306
-    hostname: mobillett_db
-    environment:
-      - TZ=Europe/Oslo
-      - MYSQL_DATABASE=mobillett
-      - MYSQL_USER=mobillett
-      - MYSQL_PASSWORD=FleskBurger
-      - MYSQL_ROOT_PASSWORD=banana83Wolf
-    networks:
-      - mob
-volumes:
-  mob-db-data:
-    driver: local
-      
-networks:
-  mob:
