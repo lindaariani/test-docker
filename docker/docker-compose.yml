@@ -14,4 +14,4 @@ services:
       DATABASE_PASSWORD: FleskBurger
       DATABASE_NAME: mobillett
       SESSION_SAVE_HANDLER: files
-      SESSION_SAVE_PATH: /tmp/
+      SESSION_SAVE_PATH: /tmp
