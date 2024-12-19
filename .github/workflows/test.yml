@@ -40,5 +40,5 @@ jobs:
           file: ./docker/php/Dockerfile
           push: true
           tags: repository.wtw.no:40001/linda-test:0.1.${{ github.run_number }}
-          cache-from: type=registry,ref=user/app:latest
+          cache-from: type=registry,ref=repository.wtw.no:40001/linda-test:0.1.${{ github.run_number }}
           cache-to: type=inline
